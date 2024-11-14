@@ -9,23 +9,22 @@ class Database:
 
     def __enter__(self):
         return self
-    
+
     def get_engine(self):
         return self.engine
-    
+
     def get_session(self):
         return self.session
-    
+
     def __exit__(self):
         self.session.close()
 
 
 class SQLiteDatabase:
     def __init__(self, uri: str, **kwargs: dict) -> None:
-        self.database = Database(uri, kwargs)
-    
+        self.database = Database(uri, **kwargs)
+
     @contextmanager
     def session(self):
         with suppress(Exception):
             yield self.database
-        

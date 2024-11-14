@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class GameInput(BaseModel):
@@ -14,8 +15,8 @@ class GameSchema(GameInput):
 
 
 class UpdateGame(BaseModel):
-    title: str | None
-    description: str | None 
-    platform: str | None
-    genre: str | None
-    price: float | None
+    title: Optional[str] = None
+    description: Optional[str] = None
+    platform: Optional[str] = None
+    genre: Optional[str] = None
+    price: Optional[float] = None
