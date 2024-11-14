@@ -64,6 +64,17 @@ python app/main.py
 
 Al ejecutar el script, podrás ver la salida correspondiente del server de *Uvicorn*.
 
+## Ejecución de pruebas unitarias con Pytest.
+
+Para ejecutar las pruebas unitarias es necesario estar en la raíz del proyecto.
+Posteriormente, es necesario correr el siguiente comando: 
+
+```bash
+pytest tests/
+```
+
+Al ejecutar el script, podrás ver la salida correspondiente del server de *Pytest*.
+
 ## Estructura del Proyecto
 
 Este es un resumen de los archivos y carpetas principales dentro del repositorio:
